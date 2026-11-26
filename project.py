@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import qrcode
-# import ... from ...
-# import ... from ...
+import json
+import cv2
 
 def generate_qrcode(name, fname, sid):
     qr = qrcode.QRCode(
@@ -17,6 +17,14 @@ def generate_qrcode(name, fname, sid):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save(f'{data}.png')
     print("qr code generated", qr)
+
+def qr_reader(qrcode):
+    ...
+
+
+def qr_validator():
+    ...
+
 
 def main():
     generate_qrcode("mouataz", "saadi", "123456789")
